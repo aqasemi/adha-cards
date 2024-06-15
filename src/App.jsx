@@ -15,8 +15,6 @@ function App() {
 
   const handleGenerateCard = (userName) => {
     setName(userName);
-    const cardNumber = Math.floor(Math.random() * 5) + 1;
-    setCardImage(`card${cardNumber}`);
     setClicked(true);
   };
 
@@ -54,9 +52,9 @@ function App() {
       <button className="bg-[#fffcf8] pl-1 white-btn shadow-sm shadow-gray-500 my-1 w-8 right-0 card-btn" onClick={() => palletBtnHandler('card5')}>
         <img src={"./assets/cards-buttons/"+previewButtonsIcons.card5} className='max-w-9 btn-img'/>
       </button>
-      <button className="bg-[#1b1b1b] shadow-inner shadow-gray-500 my-1 w-full max-h-6 right-0 magic-btn" onClick={() => {
-        const randomCardNumber = Math.floor(Math.random() * 5) + 1;
-        setCardImage(`card${randomCardNumber}`) ? !cardImage : cardImage;
+      <button title="اختر لي" className="bg-[#1b1b1b] shadow-inner shadow-gray-500 my-1 w-full max-h-6 right-0 magic-btn" onClick={() => {
+        const randomCardNumber = Math.floor(Math.random() * 3) + 1;
+        palletBtnHandler(`card${randomCardNumber}`) ? !cardImage : cardImage;
       }}>
         <img src="./assets/star.png" alt="Star" id='magic-icon' className='max-w-6'/>
       </button>
