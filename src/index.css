@@ -1,0 +1,187 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root {
+  font-family: "Noto Sans Arabic", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+
+  line-height: 1.5;
+  font-weight: 400;
+  
+  background-color: #242424;
+
+
+  font-synthesis: none;
+  --page-radius: 12px;
+}
+
+
+.page {
+  width: 100%;
+  background-color: #efe8e0;
+  box-shadow: rgba(0, 0, 0, 0.8) 9px 9px 0px 6px;
+  outline: 3px solid black;
+  border-radius: var(--page-radius);
+  
+  .titlebar {
+    height: 44px;
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+    border-bottom: 4px solid black;
+    box-sizing: border-box;
+    
+    .dot {
+      width: 25px;
+      height: 25px;
+      background-color: #ccc;
+      display: inline-block;
+      border: 3px solid black;
+      border-radius: 50%;
+      
+      &.close {
+        background-color: #c72928;
+      }
+      &.minimise {
+        background-color: #fde293;
+      }
+    }
+  }
+}
+
+.little_stroke {
+  position: relative;
+  border-bottom: 1px solid #6c6a66;
+  border-radius: var(--page-radius);
+  width: calc(100% - 24px);
+  top: 3px;
+  left: 12px;
+}
+
+.noise {
+  background: 
+  linear-gradient(to left, rgb(206, 236, 211), rgba(147, 170, 151, 0.363) 0%);
+}
+
+#input-div {
+  border: 2px solid #1b1b1b;
+  border-radius: 8px;
+  display: inline; 
+  padding: 2px
+}
+
+#name {
+  direction: rtl;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+.magic-btn {
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
+
+.magic-btn:hover {
+  outline: 2px solid #646cff;
+}
+
+.card-btn {
+  /* outline: 2px solid #eedede; */
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+  border-right: 2px solid transparent;
+  border-left: 2px solid transparent;
+  height: 30px;
+  width: 50px;
+}
+
+.btn-img {
+  height: 100%;
+  max-height: 20px;
+}
+
+.blue-btn:hover {
+  outline: 2px solid #656ce7;
+}
+.white-btn:hover {
+  outline: 2px solid #656ce7;
+}
+
+#totopbtn {
+  padding: 5px!important;
+}
+
+.button {
+  border-radius: 8px;
+  border: 2px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1b1b1b;
+  color: #efe8e0;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+.button:hover {
+  border-color: #646cff;
+}
+.button:focus,
+.button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+#card-options {
+    right: 0px;     /* Offset from the right edge */
+    top: 50px;       /* Offset from the top */
+    width: 200px;    /* Example width - adjust as needed */
+}
+
+.img-canvas {
+  border: none !important;
+  padding: 0;
+  border-radius: 0;
+  max-width: 1056px;
+  max-height: 1056px;
+}
+
+.CardPreview {
+  position: relative;
+  width: 100%;
+  margin: auto;
+}
+
+.CardPreview > h2 {
+  transform: translate(-50%, -50%);
+  width: 100%;
+  text-align: right;
+  color: black;
+  text-shadow: 0px 0px black;
+}
+
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #efe8e0;
+  border-radius: 5px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(99, 117, 102);
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
